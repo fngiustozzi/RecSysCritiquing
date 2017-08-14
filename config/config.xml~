@@ -1,20 +1,20 @@
 <configuration>
 	<database>
-		<Name>c9</Name>
-		<User>henriquelds</User>
+		<Name></Name>
+		<User></User>
 		<Pass></Pass>
 	</database>
 	<usersList>
-<!--		<userID>998144-English Portuguese-Animation Article Presentation</userID>
+		<userID>998144-English Portuguese-Animation Article Presentation</userID>
 		<userID>1039998-English Spanish-Case Study Reference Material Article Textbook Online Course Simulation</userID>
 		<userID>1078464-English Spanish-Case Study Textbook Tutorial</userID>
 		<userID>1077620-English Spanish-Article Textbook Tutorial</userID>
 		<userID>1082813-English-Case Study Article Reference Material Tutorial</userID>
 		<userID>1082928-English Portuguese-Case Study Article Textbook Tutorial</userID>
 		<userID>1055803-English Spanish-Reference Material Other</userID>
-		<userID>1081380-English-Case Study Reference Material Article Textbook Online Course Simulation</userID> -->
-		<userID>1081303-English Spanish-Presentation Simulation Reference Material Case Study Online Course Tutorial</userID>
-<!--		<userID>32944- - </userID>
+		<userID>1081380-English-Case Study Reference Material Article Textbook Online Course Simulation</userID>
+<!--		<userID>1081303-English Spanish-Presentation Simulation Reference Material Case Study Online Course</userID> SOLO TUTORIALs para este usuario.
+		<userID>32944- - </userID>
 		<userID>1081281- - </userID>
 		<userID>1077791- - </userID>
 		<userID>1082471- - </userID>
