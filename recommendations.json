@@ -1,0 +1,25 @@
+[{
+    "general": {"recommendations": [
+        {
+            "id_rec": 2095,
+            "value": 5,
+            "object": 77850
+        },
+        {
+            "id_rec": 2096,
+            "value": 5,
+            "object": 77772
+        },
+        {
+            "id_rec": 2097,
+            "value": 4,
+            "object": 618180
+        },
+        {
+            "id_rec": 2098,
+            "value": 4,
+            "object": 89069
+        }
+    ]},
+    "user": 1081303
+}]

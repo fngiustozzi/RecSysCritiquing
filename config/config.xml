@@ -1,0 +1,42 @@
+<configuration>
+	<database>
+		<Name>c9</Name>
+		<User>henriquelds</User>
+		<Pass></Pass>
+	</database>
+	<usersList>
+		<userID>998144-English Portuguese-Animation Article Presentation</userID>
+		<userID>1039998-English Spanish-Case Study Reference Material Article Textbook Online Course Simulation</userID>
+		<userID>1078464-English Spanish-Case Study Textbook Tutorial</userID>
+		<userID>1077620-English Spanish-Article Textbook Tutorial</userID>
+		<userID>1082813-English-Case Study Article Reference Material Tutorial</userID>
+		<userID>1082928-English Portuguese-Case Study Article Textbook Tutorial</userID>
+		<userID>1055803-English Spanish-Reference Material Other</userID>
+		<userID>1081380-English-Case Study Reference Material Article Textbook Online Course Simulation</userID>
+<!--		<userID>1081303-English Spanish-Presentation Simulation Reference Material Case Study Online Course</userID> SOLO TUTORIALs para este usuario.
+		<userID>32944- - </userID>
+		<userID>1081281- - </userID>
+		<userID>1077791- - </userID>
+		<userID>1082471- - </userID>
+		<userID>1082495- - </userID>
+		<userID>1080921- - </userID>
+		<userID>1086238- - </userID>
+		<userID>1080298- - </userID> -->
+
+<!-- ESTOS USUARIOS NO SE USARON PARA LA EXPERIMENTACION CRITICA
+    <userID>1082495-Spanish-Reference Material Collection</userID>
+		<userID>1080580</userID> 
+		<userID>1080766</userID>
+		<userID>1081216</userID>
+		<userID>1081305</userID>
+		<userID>1077958</userID>
+		<userID>1077739</userID>
+		<userID>1082477</userID>
+		<userID>1080268</userID>
+		<userID>1082883</userID>
+		<userID>1082899</userID>
+		<userID>443451</userID>
+		<userID>1083433</userID>
+		<userID>1080270</userID> -->
+	</usersList>
+</configuration>
