@@ -13,10 +13,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 
-/**
- *
- * @author Henrique
- */
+
 public class DBConnection {
     private Statement _stmt = null;
     private Connection _con;

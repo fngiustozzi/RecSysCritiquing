@@ -35,10 +35,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 import org.json.*;
 
-/**
- *
- * @author Henrique
- */
+
 public class RecsGenerator {
 
     /**
@@ -50,7 +47,6 @@ public class RecsGenerator {
     static String[] usersArrTypeMat = new String[1087000]; //Agregado
     
     static String general = "k1.txt";
-    //TROCAR NOMBES DOS CLUSTERS
     //static String[] clusters = {"k6-cluster5670.txt","k6-cluster5673.txt", "k6-cluster5677.txt", "k6-cluster5680.txt", "k6-cluster5684.txt", "k6-cluster5685.txt" };
         
     
@@ -68,7 +64,6 @@ public class RecsGenerator {
             Element idElement = (Element)userIDList.item(j);
             NodeList auxList = idElement.getChildNodes();
             
-            //ACA VER COMO SEPARAR IDIOMA Y TIPO DE MATERIAL          
             String uidAux = ((Node)auxList.item(0)).getNodeValue().trim();
             
             /* palabras separadas es un arreglo, 
@@ -81,7 +76,6 @@ public class RecsGenerator {
             
             String uid = palabrasSeparadas[0];
             usersArr.add( Integer.parseInt(uid));
-            // ESTO LO USO PARA GENERAR LAS RECOMENDACIONES DESPUES DE LAS CRITICAS
             // EN usersArrLanguage GUARDO LOS LENGUAJES QUE PREFIEREN LOS USUARIOS
             // EN usersArrTypeMat GUARDO LOS TIPOS DE MATERIALES QUE PREFIEREN
             //System.out.println(usersArrLanguage[Integer.parseInt(uid)]);
@@ -97,19 +91,13 @@ public class RecsGenerator {
         
         DBConnection con = new DBConnection( "c9","root", "1234");
         FileWriter fw = new FileWriter(new File("recommendations.json"));
-        /* Objeto JSON de resposta */
+
         JSONArray result = new JSONArray();
-        /*
-            Define que as mensagens de logs sejam do nível de erro 
-            evitando assim, mensagens de notificação
-        */
+
         System.setProperty("org.slf4j.simpleLogger.defaultLogLevel", "error");
-        /*
-            Em caso de logs de erros, estes devem ser escritos em um arquivo
-        */
+
         System.setProperty("org.slf4j.simpleLogger.logFile", "MerlotRecommender.log");
         
-        /* Construção de um recomendador */
         RecommenderBuilder builder = new RecommenderBuilder() {
             @Override
             public Recommender buildRecommender(DataModel dm) throws TasteException {
@@ -122,13 +110,8 @@ public class RecsGenerator {
     	};
         
         for(int iduser : usersArr){            
-            //Recomendação geral
             FileDataModel modelGeneral = new FileDataModel(new File(general));
             List<RecommendedItem> listGeneral = builder.buildRecommender(modelGeneral).recommend(iduser, 500); //CANTIDAD DE RECOMENDACIONES A GENERAR POR USUARIO
-            //loop para acotar las recomendaciones generadas
-            //ACA HACER EL TRUNCAMIENTO
-            // accedo al idioma elegido por cada usuario asi: usersArrLanguage[iduser]
-            // accedo al tipo de material elegido por cada usuario asi: usersArrTypeMat[iduser]
             List<RecommendedItem> listGeneralCritica; 
             listGeneralCritica = new ArrayList<RecommendedItem>();
 
@@ -136,7 +119,7 @@ public class RecsGenerator {
             String tipoMaterial="";
             int indice = 0;
             for(RecommendedItem recom : listGeneral){
-                if(listGeneral.size()>=4 && indice<4){ //QUIZAS NO FUNCIONE LA CONDICION listGeneral.size()>=4 PARA TODOS
+                if(listGeneral.size()>=4 && indice<4){ 
                     languageRec = con.selectRecLanguage((int) recom.getItemID());
                     tipoMaterial = con.selectRecTipoMat((int) recom.getItemID());
                     boolean bandera = false;
