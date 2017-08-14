@@ -1,9 +1,5 @@
 <?php
-/**  
-*  Recsys-frontend, Copyright (c) 2013, Simon Dooms
-*  http://github.com/sidooms/recsys-frontend
-*  MIT License
-*/
+
     //read the variables from the config/settings.ini file
     $settingspath = str_replace('general.php', '', __FILE__) . 'config/';
     $ini_array = parse_ini_file($settingspath . "settings.ini", true);

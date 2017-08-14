@@ -1,9 +1,4 @@
 <?php
-/**  
-*  Recsys-frontend, Copyright (c) 2013, Simon Dooms
-*  http://github.com/sidooms/recsys-frontend
-*  MIT License
-*/
 
     $title = $_REQUEST['title'];
     

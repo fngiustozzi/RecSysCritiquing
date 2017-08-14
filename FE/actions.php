@@ -1,9 +1,5 @@
 <?php
-/**  
-*  Recsys-frontend, Copyright (c) 2013, Simon Dooms
-*  http://github.com/sidooms/recsys-frontend
-*  MIT License
-*/
+
 require_once('general.php');
 
 $action = $_REQUEST['action'];
